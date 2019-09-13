@@ -174,11 +174,6 @@ p {
   align-items: center;
   text-align: center;
 }
-@media (max-width: 500px) {
-  .navbar {
-    width: 90%;
-  }
-}
 .navbar h1 {
   font-size: 4rem;
   padding: 15px;
