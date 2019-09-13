@@ -3,6 +3,20 @@
 .home {
 
   .intro {
+    @media @phone {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
     h2 {
       padding: 15px;
@@ -24,6 +38,23 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @phone {
+        width: 90%;
+        margin: 5% auto;
+      }
+    }
+    
+    @media @phone {
+      .sky {
+        display: none;
+      }
+    }
+
+    @media @phone {
+      .launch {
+        display: none;
+      }
     }
   }
 
@@ -46,8 +77,22 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 100%;
+        margin: 5% auto;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +103,24 @@
       }
 
       .btn {
+        .buttonStyle(white, @header-font-color)
+      }
+
+      .btn:hover {
+        color: black;
+        background-color:grey;
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 100%;
+        margin: 0 auto;
+        order: -1;
+      }
       
       img {
         width: 100%;

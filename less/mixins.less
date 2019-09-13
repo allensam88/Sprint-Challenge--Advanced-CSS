@@ -1,1 +1,13 @@
-// Mixins Here
+.mixin1(){}
+.mixin2(){}
+
+// Parametric Mixin for Button Style
+.buttonStyle(@font-color, @background-color){
+    color: @font-color;
+    background: @background-color;
+    text-align: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 2rem;
+}
