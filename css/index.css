@@ -170,7 +170,6 @@ p {
 }
 @media (max-width: 500px) {
   .navbar {
-    max-width: 500px;
     width: 90%;
   }
 }
@@ -186,7 +185,6 @@ p {
 }
 @media (max-width: 500px) {
   .navbar nav {
-    max-width: 500px;
     width: 90%;
   }
 }
@@ -240,7 +238,7 @@ footer {
 @media (max-width: 500px) {
   .home .space-images img {
     width: 90%;
-    margin: 5% auto;
+    margin: 2% auto;
   }
 }
 @media (max-width: 500px) {
@@ -273,10 +271,10 @@ footer {
   .home .walk {
     width: 90%;
     margin: 0 auto;
-    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 }
 .home .walk .walk-text {
@@ -302,6 +300,12 @@ footer {
   padding: 10px;
   border-radius: 8px;
   font-size: 2rem;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .home .walk .walk-text .btn:hover {
   color: black;

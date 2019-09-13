@@ -4,11 +4,8 @@
 
   .intro {
     @media @phone {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      .mobileMargin(90%, 0);
+      .mobileFlex();
     }
 
     img {
@@ -40,20 +37,19 @@
       height: 100%;
 
       @media @phone {
-        width: 90%;
-        margin: 5% auto;
+        .mobileMargin(90%, 2%);
       }
     }
     
     @media @phone {
       .sky {
-        display: none;
+        .displayNoImage();
       }
     }
 
     @media @phone {
       .launch {
-        display: none;
+        .displayNoImage();
       }
     }
   }
@@ -78,20 +74,16 @@
     justify-content: center;
 
     @media @phone {
-      width: 90%;
-      margin: 0 auto;
+      .mobileMargin(90%, 0);
+      .mobileFlex();
       padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
 
     .walk-text {
       width: 50%;
 
       @media @phone {
-        width: 100%;
-        margin: 5% auto;
+        .mobileMargin(100%, 5%);
       }
 
       h3 {
@@ -103,7 +95,11 @@
       }
 
       .btn {
-        .buttonStyle(white, @header-font-color)
+        .buttonStyle(white, @header-font-color);
+
+        @media @phone {
+          .mobileMargin(100%, 0);
+        }
       }
 
       .btn:hover {
@@ -117,8 +113,7 @@
       margin-left: 4%;
 
       @media @phone {
-        width: 100%;
-        margin: 0 auto;
+        .mobileMargin(100%, 0);
         order: -1;
       }
       
