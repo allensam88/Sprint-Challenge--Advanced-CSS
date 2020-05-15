@@ -34,13 +34,26 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the difference between an adaptive website and a fully responsive website?
 
+An adaptive website will statically change depending on the device viewport.  Many of the elements are hard coded as pixels and are not flexible, but still work for that specific device that it is coded for.  So there will still be media queries for different viewport sizes.  
+A responsive website will dynamically change depending on the device viewport so it has flexible elements like em, rem, and % that can resize depending on user browser settings and different media query devices.
+
 2. Describe what it means to be mobile first vs desktop first.
+
+Desktop first establishes the CSS code for the largest device, which is a desktop computer.  The subsequent media queries will cascade down into smaller and smaller devices using the max-width: pixel size property.
+Mobile first is when the CSS code is designed for the smallest device such as a phone.  Min-width is used instead for all media queries as the device screen gets bigger and bigger.
 
 3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
 
+The default font-size is 16 pixels, so using 62.5% readjusts the default font-size to 10 pixels because [(10 / 16) x 100] = 62.5%.  If the user changes his/her browser settings to larger or smaller font-sizes, then using a ratio will respect the new settings and not hard-code a static pixel size.  The rest of the fonts will dynamically change based on ‘rem’ because they are based on the root font-size element.  Everything is multiplied by 10, so we can use whole numbers for the rem values (for example twice as big will be 2 rem).
+
 4. How would you describe preprocessing to someone new to CSS?
 
+Pre-processing uses another code syntax, such as LESS, for creating web stylings, then JavaScript processes that code into CSS.  The website is still using CSS for stylings, but it is compiled from another code that is more robust and has greater functionality and capabilities, such as variables, mix-ins, nesting, use functions, etc…  This allows the developer to organize their stylings in a more efficient and D.R.Y. format in LESS instead of classic CSS.
+
 5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+
+The best part about pre-processing is organization and efficiency.  I love the nesting capability and the mixins, it really saves time and shortens the lines of code.  I like importing from separate less files into the index as well, it just makes life a lot easier, rather than staring at thousands of lines of code in a single file.  The concept that tripped me up a couple times were the escape media queries, along with making sure the meta viewport is in my index.html head and stopping/restarting the less-watch-compiler each time I do add/commit.
+
 
 You are expected to be able to answer all these questions. Your responses contribute to your Sprint Challenge grade. Skipping this section *will* prevent you from passing this challenge.
 
